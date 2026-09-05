@@ -33,7 +33,11 @@
 <section>
   <div class="contact-wrap">
     <div class="contact-form">
-      <form action="mailto:hello@thrazha.ca" method="post" enctype="text/plain">
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="70badb1c-4f36-4ba5-846b-877db5cbcf6b">
+        <input type="hidden" name="subject" value="New inquiry from thrazha.ca contact form">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
         <label for="name">Your First Name Please</label>
         <input type="text" id="name" name="name">
 
@@ -43,8 +47,54 @@
         <label for="message">Your Message Here*</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="btn btn-primary">Submit Your Inquiry Now</button>
+        <button type="submit" class="btn btn-primary" id="contactSubmitBtn">Submit Your Inquiry Now</button>
+        <p id="contactFormResult" style="margin-top:14px; font-weight:bold;"></p>
       </form>
+      <script>
+        const contactForm = document.getElementById('contactForm');
+        const contactResult = document.getElementById('contactFormResult');
+        const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          contactSubmitBtn.disabled = true;
+          contactSubmitBtn.textContent = 'Sending...';
+          contactResult.style.color = '#555';
+          contactResult.textContent = 'Please wait...';
+
+          const formData = new FormData(contactForm);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            },
+            body: json
+          })
+            .then(async (response) => {
+              let jsonResponse = await response.json();
+              if (response.status === 200) {
+                contactResult.style.color = '#2f4a33';
+                contactResult.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+              } else {
+                contactResult.style.color = 'red';
+                contactResult.textContent = jsonResponse.message || 'Something went wrong. Please try again.';
+              }
+            })
+            .catch((error) => {
+              contactResult.style.color = 'red';
+              contactResult.textContent = 'Something went wrong. Please try again or email us directly.';
+            })
+            .then(function () {
+              contactForm.reset();
+              contactSubmitBtn.disabled = false;
+              contactSubmitBtn.textContent = 'Submit Your Inquiry Now';
+            });
+        });
+      </script>
     </div>
     <div class="contact-info">
       <h3>HOW CAN WE HELP YOU OUT?</h3>
