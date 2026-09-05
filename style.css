@@ -1,0 +1,117 @@
+:root {
+  --brand-dark: #1b2b1e;
+  --brand-green: #2f4a33;
+  --brand-gold: #c9a24b;
+  --text-light: #f7f5ef;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #222;
+  background: var(--text-light);
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--brand-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header img { height: 48px; }
+nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; }
+nav a { color: var(--text-light); text-decoration: none; font-size: 15px; letter-spacing: 0.5px; }
+nav a:hover, nav a.active { color: var(--brand-gold); }
+
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero video, .hero > img.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.55);
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 20px; }
+.hero-content h1 { font-size: 2.6rem; margin-bottom: 12px; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 24px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; }
+.btn {
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+.btn-primary { background: var(--brand-gold); color: #1b2b1e; border: none; cursor: pointer; }
+.btn-secondary { background: transparent; border: 1px solid white; color: white; }
+
+section { padding: 64px 24px; max-width: 1100px; margin: 0 auto; }
+section h2 { text-align: center; font-size: 2rem; color: var(--brand-green); margin-bottom: 8px; }
+section .lead { text-align: center; max-width: 640px; margin: 0 auto 40px; color: #555; }
+
+.split { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+.split img { width: 100%; max-width: 420px; border-radius: 8px; object-fit: cover; }
+.split .text { flex: 1; min-width: 280px; }
+.split h3 { color: var(--brand-gold); text-transform: uppercase; letter-spacing: 1px; font-size: 0.95rem; }
+.split h2 { text-align: left; }
+
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.card { text-align: center; }
+.card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+.card h4 { color: var(--brand-green); margin-bottom: 8px; }
+
+.testimonials { background: var(--brand-dark); color: var(--text-light); max-width: 100%; }
+.testimonials-inner { max-width: 1100px; margin: 0 auto; }
+.testimonials h2 { color: var(--text-light); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.testimonial-card { background: rgba(255,255,255,0.05); padding: 24px; border-radius: 8px; }
+.testimonial-card .stars { color: var(--brand-gold); margin-bottom: 8px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.testimonial-author img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+
+.gallery { columns: 4 200px; column-gap: 16px; }
+.gallery img { width: 100%; margin-bottom: 16px; border-radius: 8px; display: block; break-inside: avoid; }
+
+.contact-wrap { display: flex; flex-wrap: wrap; gap: 48px; }
+.contact-form { flex: 1; min-width: 300px; }
+.contact-info { flex: 1; min-width: 260px; }
+.contact-form label { display: block; margin-bottom: 6px; font-weight: bold; color: var(--brand-green); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.contact-form textarea { min-height: 140px; resize: vertical; }
+.contact-info h3 { color: var(--brand-green); }
+.contact-info a { color: var(--brand-green); }
+
+footer { background: var(--brand-dark); color: var(--text-light); text-align: center; padding: 40px 20px; }
+footer .social a { color: var(--text-light); margin: 0 10px; text-decoration: none; }
+footer .social a:hover { color: var(--brand-gold); }
+footer .tagline { margin-top: 12px; color: var(--brand-gold); font-style: italic; }
+footer .copyright { margin-top: 20px; font-size: 0.85rem; color: #aaa; }
+
+@media (max-width: 700px) {
+  nav ul { gap: 14px; flex-wrap: wrap; }
+  .hero-content h1 { font-size: 1.8rem; }
+}
