@@ -6,118 +6,192 @@
 <title>THRAZHA: Premier Canadian Agricultural Trading Company | THRAZHA - From Field to World</title>
 <meta name="description" content="Your trusted partner in global agricultural trade, connecting quality producers with premium markets worldwide.">
 <meta name="keywords" content="agricultural trading, palm oil, global trade">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <a href="index.html"><img src="assets/logo.jpeg" alt="THRAZHA - From Field to World logo"></a>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">THRAZHA</span>
+      <span class="brand-suffix">Int'l&nbsp;Inc.</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO with video -->
-<section class="hero" style="padding:0; max-width:100%;">
-  <video autoplay muted loop playsinline>
-    <source src="assets/hero-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="hero-content">
-    <h1>Connecting Global Agricultural Producers and Distributors</h1>
+<!-- HERO -->
+<section class="hero hero-home">
+  <img class="hero-bg" src="assets/unsplash-field-sunset.jpg" alt="Harvested beans held in cupped hands">
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <div class="eyebrow on-dark"><span class="rule"></span>Canada&nbsp;/&nbsp;West Africa trade corridor</div>
+    <h1>Connecting global agricultural producers and distributors</h1>
     <p>Your trusted partner in premium agricultural commodities trade.</p>
     <div class="hero-buttons">
-      <a class="btn btn-primary" href="about.html">Learn</a>
-      <a class="btn btn-secondary" href="contact.html">Trade</a>
+      <a class="btn btn-primary" href="services.html">Our capabilities</a>
+      <a class="btn btn-secondary" href="contact.html">Request a quotation</a>
     </div>
   </div>
 </section>
 
+<!-- CREDENTIALS STRIP -->
+<div class="credentials">
+  <div class="credentials-grid">
+    <div class="credentials-item">
+      <div class="credentials-label">Incorporation</div>
+      <div class="credentials-value">Federally incorporated in Ontario, Canada</div>
+    </div>
+    <div class="credentials-item">
+      <div class="credentials-label">Business number</div>
+      <div class="credentials-value mono">[ BN 0000&nbsp;0000 ]</div>
+    </div>
+    <div class="credentials-item">
+      <div class="credentials-label">Import / export licence</div>
+      <div class="credentials-value mono">[ Licence no. ]</div>
+    </div>
+    <div class="credentials-item">
+      <div class="credentials-label">Origins served</div>
+      <div class="credentials-value">Nigeria&nbsp;&middot;&nbsp;Tanzania</div>
+    </div>
+  </div>
+</div>
+
 <!-- WELCOME -->
 <section class="split">
-  <img src="assets/palm-oil.jpg" alt="Palm oil">
-  <div class="text">
-    <h3>Welcome to</h3>
+  <div class="split-media">
+    <img src="assets/palm-oil-warehouse.jpg" alt="Palm oil in sealed jerrycans, ready for despatch">
+    <div class="split-tag">
+      <div class="credentials-label">Flagship commodity</div>
+      <div class="split-tag-value">Crude &amp; refined palm oil</div>
+    </div>
+  </div>
+  <div class="split-text">
+    <div class="eyebrow">Welcome to</div>
     <h2>THRAZHA International Inc.</h2>
+    <div class="divider"></div>
     <p>We connect quality producers with trusted distributors worldwide, ensuring seamless supply chain operations and reliable product delivery.</p>
-    <a class="btn btn-primary" href="about.html" style="margin-top:12px;">Learn</a>
+    <a class="split-link" href="about.html">About the company <span class="mono">&rarr;</span></a>
   </div>
 </section>
 
 <!-- GLOBAL TRADE SOLUTIONS -->
+<div class="section-dark">
+  <div class="section-dark-inner">
+    <div class="section-head-row">
+      <h2>Global trade solutions</h2>
+      <p>Connecting producers and distributors for seamless agricultural commodity trading worldwide.</p>
+    </div>
+    <div class="numbered-grid">
+      <div class="numbered-card">
+        <div class="numbered-index">01</div>
+        <h3>Quality assurance services</h3>
+        <p>Ensuring premium product quality through rigorous standards and inspections.</p>
+      </div>
+      <div class="numbered-card">
+        <div class="numbered-index">02</div>
+        <h3>Logistics management</h3>
+        <p>Streamlining supply chain operations for efficient and reliable delivery of agricultural products.</p>
+      </div>
+      <div class="numbered-card">
+        <div class="numbered-index">03</div>
+        <h3>Partnership development</h3>
+        <p>Building sustainable partnerships for long-term success in the agricultural trade market.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMODITY INDEX -->
 <section>
-  <h2>Global Trade Solutions</h2>
-  <p class="lead">Connecting producers and distributors for seamless agricultural commodity trading worldwide.</p>
-  <div class="grid-3">
-    <div class="card">
-      <img src="assets/unsplash-field-sunset.jpg" alt="Agricultural landscape with rows of planted crops, palm trees, and mountains at sunset.">
-      <h4>Quality Assurance Services</h4>
-      <p>Ensuring premium product quality through rigorous standards and inspections.</p>
+  <div class="eyebrow"><span class="rule"></span>Commodity index</div>
+  <h2 style="margin-top:22px; max-width:22ch;">What we trade</h2>
+  <div class="commodity-grid">
+    <div class="commodity-card">
+      <div class="commodity-media"><img src="assets/palm-oil.jpg" alt="Palm oil"></div>
+      <div class="commodity-meta"><span class="name">Palm oil</span><span class="form">Crude &middot; refined</span></div>
     </div>
-    <div class="card">
-      <img src="assets/okitipupa-oil-palm.jpg" alt="Palm oil plantation with harvested palm fruit bunches in the foreground.">
-      <h4>Logistics Management</h4>
-      <p>Streamlining supply chain operations for efficient and reliable delivery of agricultural products.</p>
+    <div class="commodity-card">
+      <div class="commodity-media"><img src="assets/hibiscus.jpg" alt="Dried hibiscus petals"></div>
+      <div class="commodity-meta"><span class="name">Hibiscus</span><span class="form">Dried petals</span></div>
     </div>
-    <div class="card">
-      <img src="assets/sunflowers.jpg" alt="Sunflower field landscape">
-      <h4>Partnership Development</h4>
-      <p>Building sustainable partnerships for long-term success in the agricultural trade market.</p>
+    <div class="commodity-card">
+      <div class="commodity-media"><img src="assets/sunflowers.jpg" alt="Sunflower field"></div>
+      <div class="commodity-meta"><span class="name">Sunflower</span><span class="form">Seed &middot; oil</span></div>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-media"><img src="assets/sesame.jpeg" alt="Sesame grains"></div>
+      <div class="commodity-meta"><span class="name">Sesame</span><span class="form">Hulled &middot; natural</span></div>
+    </div>
+    <div class="commodity-card">
+      <div class="commodity-media"><img src="assets/coffee-bean.jpg" alt="Bagged coffee beans"></div>
+      <div class="commodity-meta"><span class="name">Coffee</span><span class="form">Bagged beans</span></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="testimonials-inner">
-    <h2>What Our Partners Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"THRAZHA connects us with reliable suppliers, ensuring quality products and seamless delivery every time."</p>
-        <div class="testimonial-author">
-          <img src="assets/unsplash-palm-tree.jpg" alt="Tall palm tree against a clear sky">
-          <span>John Smith</span>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Our partnership with THRAZHA International Inc. has transformed our supply chain, providing exceptional service and quality agricultural commodities."</p>
-        <div class="testimonial-author">
-          <img src="assets/unsplash-plantation.jpg" alt="Plantation field with young palm trees in rows">
-          <span>Emily Davis</span>
-        </div>
-      </div>
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <div>
+      <h2>Tell us the commodity, volume and destination port.</h2>
+      <p>We respond to trade inquiries with indicative pricing and lead times.</p>
     </div>
+    <a class="btn btn-dark" href="contact.html">Start an inquiry</a>
   </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-  <h2>Our Gallery</h2>
-  <p class="lead">Explore our premium agricultural products and global trade partnerships.</p>
-  <div class="gallery">
-    <img src="assets/coffee-bean.jpg" alt="Coffee beans">
-    <img src="assets/palm-oil-warehouse.jpg" alt="Palm oil stock in warehouse">
-    <img src="assets/hibiscus.jpg" alt="Large pile of dried petals of the Hibiscus sabdariffa plant in the farmland">
-    <img src="assets/sesame.jpeg" alt="Large pile of sesame grains in a farm">
-  </div>
-</section>
+</div>
 
 <footer>
-  <div class="social">
-    <a href="https://www.facebook.com/" title="Go to Facebook page">Facebook</a>
-    <a href="https://www.instagram.com/" title="Go to Instagram page">Instagram</a>
-    <a href="https://tiktok.com/" title="Go to Tiktok page">TikTok</a>
-    <a href="https://x.com/" title="Go to Twitter page">X (Twitter)</a>
+  <div class="footer-inner">
+    <div class="footer-columns">
+      <div class="footer-brand">
+        <div class="brand" style="color:inherit;">
+          <span class="brand-name">THRAZHA</span>
+          <span class="brand-suffix">Int'l&nbsp;Inc.</span>
+        </div>
+        <p class="footer-tagline">Bridging Fields Worldwide &middot; Sustainable Solutions</p>
+      </div>
+      <div>
+        <div class="footer-heading">Site</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <div class="footer-links">
+          <a href="tel:+14168354513">+1 (416) 835-4513</a>
+          <a href="mailto:hello@thrazha.ca">hello@thrazha.ca</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Social</div>
+        <div class="footer-links">
+          <a href="https://www.facebook.com/" title="Go to Facebook page">Facebook</a>
+          <a href="https://www.instagram.com/" title="Go to Instagram page">Instagram</a>
+          <a href="https://tiktok.com/" title="Go to Tiktok page">TikTok</a>
+          <a href="https://x.com/" title="Go to Twitter page">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">&copy; 2026 THRAZHA INTERNATIONAL INC. All rights reserved.</div>
+      <div class="footer-shop">Also visit <a href="https://shop.thrazha.ca">shop.thrazha.ca</a> &mdash; our retail store.</div>
+    </div>
   </div>
-  <div class="tagline">THRAZHA | Bridging Fields Worldwide | Sustainable Solutions</div>
-  <div class="copyright">&copy; 2024 THRAZHA INTERNATIONAL INC. All rights reserved.</div>
 </footer>
 
 </body>
