@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Tag Manager -->
+<script>
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  window.__loadAnalytics = function(){
+    if (window.__analyticsLoaded) return;
+    window.__analyticsLoaded = true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8MLG3W6');
+    var ga=document.createElement('script');
+    ga.async=true;
+    ga.src='https://www.googletagmanager.com/gtag/js?id=G-5YRZVWQFE5';
+    document.head.appendChild(ga);
+    gtag('js', new Date());
+    gtag('config', 'G-5YRZVWQFE5');
+  };
+  try {
+    if (localStorage.getItem('cookie_consent') === 'accepted') { window.__loadAnalytics(); }
+  } catch(e){}
+})();
+</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THRAZHA International Inc. | Canadian Agricultural Trading Company</title>
@@ -45,6 +72,37 @@
 </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8MLG3W6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="cookieConsent" class="cookie-consent" hidden>
+  <p>We use cookies to understand site traffic and improve your experience.</p>
+  <div class="cookie-consent-actions">
+    <button type="button" id="cookieAccept">Accept</button>
+    <button type="button" id="cookieDismiss">Dismiss</button>
+  </div>
+</div>
+<script>
+(function(){
+  try {
+    var consent = localStorage.getItem('cookie_consent');
+    var dismissed = sessionStorage.getItem('cookie_dismissed');
+    var banner = document.getElementById('cookieConsent');
+    if (consent !== 'accepted' && !dismissed) { banner.hidden = false; }
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      try { localStorage.setItem('cookie_consent', 'accepted'); } catch(e){}
+      banner.hidden = true;
+      if (window.__loadAnalytics) window.__loadAnalytics();
+    });
+    document.getElementById('cookieDismiss').addEventListener('click', function(){
+      try { sessionStorage.setItem('cookie_dismissed', '1'); } catch(e){}
+      banner.hidden = true;
+    });
+  } catch(e){}
+})();
+</script>
 
 <header>
   <div class="header-inner">
