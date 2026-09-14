@@ -491,6 +491,7 @@ footer { background: var(--ink); color: var(--bg); }
 }
 
 /* COOKIE CONSENT BANNER */
+.cookie-consent[hidden] { display: none; }
 .cookie-consent {
   position: fixed;
   left: 20px;
